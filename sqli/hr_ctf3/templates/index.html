@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+
+{% block title %}HR Management System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <header>
+        <h1>⚡ HR MANAGEMENT SYSTEM ⚡</h1>
+        <p class="subtitle"><span class="terminal-prompt">$</span> Access Control Interface v2.1</p>
+    </header>
+
+    <div class="nav-grid">
+        <a href="/employees" class="nav-card">
+            <h2>👥 Employees</h2>
+            <p>View all registered employees in the system database. Access personnel records and organizational structure.</p>
+        </a>
+
+        <a href="/add" class="nav-card">
+            <h2>🔍 Search</h2>
+            <p>Query employee database by name. Advanced search capabilities with real-time results.</p>
+        </a>
+
+        <a href="/kpi" class="nav-card">
+            <h2>📊 KPI Management</h2>
+            <p>Add and track Key Performance Indicators for employee metrics and evaluations.</p>
+        </a>
+
+        <a href="/delete" class="nav-card">
+            <h2>🗑️ Delete Employee</h2>
+            <p>Remove employee records from the system. Administrative access required.</p>
+        </a>
+    </div>
+</div>
+{% endblock %}

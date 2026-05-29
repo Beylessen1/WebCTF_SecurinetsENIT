@@ -1,0 +1,11 @@
+Challenge : GutHib 1
+Description: Paste a GitHub repository link and we’ll clone it for you. What could possibly go wrong?
+
+Challenge : GutHib 2
+Description: It does exactly what you ask. Nothing more. Nothing less.
+
+Challenge : GutHib 3
+Description: Input goes in, output comes out. The details are easy to overlook.
+
+Challenge : GutHib 4
+Description: This cloner trusts your input more than GitHub itself. Let’s see what else it can fetch.

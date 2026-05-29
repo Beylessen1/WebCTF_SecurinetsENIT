@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #343541;
+    font-family: 'Söhne', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', sans-serif;
+    color: #ececf1;
+}
+
+.chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+    font-size: 14px;
+    padding: 16px;
+    background: #202123;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d1d5db;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    position: relative;
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #19c37d, #10a37f);
+    width: 0%;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(25, 195, 125, 0.5);
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background: #565869;
+    border-radius: 4px;
+}
+
+.message-row {
+    width: 100%;
+    padding: 24px 0;
+}
+
+.message-row.user {
+    background: #343541;
+}
+
+.message-row.bot {
+    background: #444654;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.message-content {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.avatar.user {
+    background: #5436da;
+    color: white;
+}
+
+.avatar.bot {
+    background: #19c37d;
+    color: white;
+}
+
+.message-text {
+    flex: 1;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #ececf1;
+    padding-top: 4px;
+}
+
+/* File Preview Styles */
+.file-preview {
+    margin-bottom: 12px;
+}
+
+.file-thumbnail {
+    max-width: 300px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+}
+
+.file-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.file-icon {
+    font-size: 18px;
+}
+
+.file-name {
+    color: #ececf1;
+    font-weight: 500;
+}
+
+.input-section {
+    background: #343541;
+    padding: 12px 0 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input-area {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Selected File Preview in Input */
+.selected-file-preview {
+    margin-bottom: 12px;
+    display: none;
+}
+
+.selected-file-preview.active {
+    display: block;
+}
+
+.selected-file-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #40414f;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.selected-file-thumbnail {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.selected-file-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.selected-file-name {
+    font-size: 14px;
+    color: #ececf1;
+    font-weight: 500;
+}
+
+.selected-file-size {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.remove-file-btn {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.remove-file-btn:hover {
+    color: #ef4444;
+}
+
+.input-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    background: #40414f;
+    border-radius: 12px;
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-container:focus-within {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+.upload-btn {
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #ececf1;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    padding: 4px;
+}
+
+.upload-btn:hover {
+    opacity: 1;
+}
+
+.prompt-input {
+    flex: 1;
+    padding: 8px 4px;
+    border: none;
+    background: transparent;
+    color: #ececf1;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    font-family: inherit;
+    line-height: 1.5;
+    max-height: 200px;
+}
+
+.prompt-input::placeholder {
+    color: #6b6b7b;
+}
+
+.send-btn {
+    background: #19c37d;
+    border: none;
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.send-btn:hover {
+    background: #1a9f6a;
+}
+
+.send-btn:disabled {
+    background: #40414f;
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 24px;
+}
+
+.welcome-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: #ececf1;
+}
+
+.example-prompts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    max-width: 48rem;
+    width: 100%;
+}
+
+.example-prompt {
+    background: #3e3f4b;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.example-prompt:hover {
+    background: #4a4b57;
+}
+
+.example-prompt-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #ececf1;
+}
+
+.example-prompt-text {
+    font-size: 13px;
+    color: #9ca3af;
+}

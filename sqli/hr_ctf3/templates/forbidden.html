@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block title %}403 Forbidden - HR System{% endblock %}
+
+{% block content %}
+<div class="container forbidden">
+    <h1>403</h1>
+    <p>ACCESS DENIED</p>
+    <p style="margin-top: 40px; font-size: 1em; color: #00cc33;">
+        <span class="terminal-prompt">$</span> This operation requires administrative privileges.<br>
+        Contact your system administrator for access.
+    </p>
+    <a href="/" class="back-link" style="margin-top: 40px;">← Return to Main Menu</a>
+</div>
+{% endblock %}

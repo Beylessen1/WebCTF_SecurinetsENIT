@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Employees - HR System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <header>
+        <h1>👥 EMPLOYEE DIRECTORY</h1>
+        <p class="subtitle"><span class="terminal-prompt">$</span> Displaying all active personnel</p>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>POSITION</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in employees %}
+            <tr>
+                <td>{{ e.id }}</td>
+                <td>{{ e.name }}</td>
+                <td>{{ e.position }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="/" class="back-link">← Back to Main Menu</a>
+</div>
+{% endblock %}
