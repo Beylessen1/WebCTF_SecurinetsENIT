@@ -163,11 +163,12 @@ SecurinetsENIT{...}
 ```
 
 <br>
+<br>
 ## 🔥 Player Progression
 
 ![Player Progression](assets/player-progression.png)
 
-
+<br>
 
 ---
 
