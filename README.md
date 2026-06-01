@@ -163,12 +163,15 @@ SecurinetsENIT{...}
 ```
 
 <br>
-<br>
 ## 🔥 Player Progression
 
-![Player Progression](assets/player-progression.png)
+<div align="center">
+  <img src="assets/player-progression.png" alt="Player Progression">
+</div>
 
-<br>
+---
+
+<div align="center">
 
 ---
 
