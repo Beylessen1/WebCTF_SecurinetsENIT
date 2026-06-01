@@ -38,7 +38,7 @@
 
 <br>
 
-![ChalOverview](Screenshot From 2025-12-15 22-53-53.png)
+![Challenge Overview](assets/challenge-overview.png)
 
 ## 📦 Challenge Categories
 <br>
@@ -165,7 +165,7 @@ SecurinetsENIT{...}
 <br>
 ## 🔥 Player Progression
 
-![PLayerProgression](Screenshot From 2025-12-15 22-58-58.png)
+![Player Progression](assets/player-progression.png)
 
 
 
