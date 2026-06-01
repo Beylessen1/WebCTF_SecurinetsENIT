@@ -154,24 +154,15 @@ python app.py
 
 <br>
 
-## 🏁 Flag Format
+## 🏁 Flag Format and Player Progression
 
 All flags follow the format:
 
 ```
 SecurinetsENIT{...}
 ```
-
+![Player Progression](assets/player-progression.png)
 <br>
-## 🔥 Player Progression
-
-<div align="center">
-  <img src="assets/player-progression.png" alt="Player Progression">
-</div>
-
----
-
-<div align="center">
 
 ---
 
